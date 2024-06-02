@@ -1,0 +1,19 @@
+Write a function that reverses a string. The input string is given as an array of characters s.
+
+You must do this by modifying the input array in-place with O(1) extra memory.
+
+
+class Solution {
+    public void reverseString(char[] s) {
+//reverse a string USING STACK
+        Stack<Character> stack = new Stack<>();
+        for(char ch:s){
+            stack.push(ch);
+        }
+
+        int index = 0;
+        while(!stack.isEmpty()){
+            s[index++] = stack.pop();
+        }
+    }
+}
